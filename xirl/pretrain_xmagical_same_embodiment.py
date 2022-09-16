@@ -86,7 +86,7 @@ def main(_):
 
     # Note: This assumes that the config.root_dir value has not been
     # changed to its default value of 'tmp/xirl/pretrain_runs/'.
-    exp_path = osp.join("/tmp/xirl/pretrain_runs/", experiment_name)
+    exp_path = osp.join("/home/user_117/user_1/xirl/pretrain_runs/", experiment_name)
 
     # The 'goal_classifier' baseline does not need to compute a goal embedding.
     if FLAGS.algo != "goal_classifier":
@@ -101,7 +101,7 @@ def main(_):
       )
 
     # Dump experiment metadata as yaml file.
-    with open(osp.join(exp_path, "metadata.yaml"), "wb") as fp:
+    with open(osp.join(exp_path, "metadata.yaml"), "w") as fp:
       yaml.dump(kwargs, fp)
 
 

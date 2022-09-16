@@ -24,6 +24,8 @@ EMBODIMENTS = frozenset([
     "mediumstick",
     "longstick",
     "gripper",
+    "pealate",
+    "hand",
 ])
 
 # All baseline pretraining strategies we ran for the CoRL experiments.
@@ -41,6 +43,8 @@ XMAGICALTrainingIterations = FrozenConfigDict({
     "mediumstick": 250_000,
     "shortstick": 500_000,
     "gripper": 500_000,
+    "pealate": 75_000,
+    "hand": 75_000,
 })
 
 # A mapping from RLV environment to RL training iterations.

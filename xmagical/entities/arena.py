@@ -40,7 +40,7 @@ class ArenaBoundaries(Entity):
         width = self.right - self.left
         height = self.top - self.bottom
         arena_square = r.make_rect(width, height, True)
-        arena_square.color = (1, 1, 1)
+        arena_square.color = COLORS_RGB["background"] #maya@rahel
         arena_square.outline_color = COLORS_RGB["grey"]
         txty = (self.left + width / 2, self.bottom + height / 2)
         centre_xform = r.Transform(translation=txty)

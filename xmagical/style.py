@@ -25,7 +25,7 @@ def lighten_rgb(rgb: RGBTuple, times: float = 1.0) -> RGBTuple:
     return colorsys.hls_to_rgb(*hls_new)
 
 
-GOAL_LINE_THICKNESS = 0.01
+GOAL_LINE_THICKNESS = 0.0001 #maya@rahel org0.01
 SHAPE_LINE_THICKNESS = 0.015
 ROBOT_LINE_THICKNESS = 0.01
 COLORS_RGB = {
@@ -33,10 +33,12 @@ COLORS_RGB = {
     # https://brand.berkeley.edu/colors/ (lightened).
     "blue": lighten_rgb(rgb(0x3B, 0x7E, 0xA1), 1.7),  # founder's rock
     "yellow": lighten_rgb(rgb(0xFD, 0xB5, 0x15), 1.7),  # california gold
-    "red": lighten_rgb(rgb(0xEE, 0x1F, 0x60), 1.7),  # rose garden
+    "red": rgb(0, 150, 130), #lighten_rgb(rgb(0xEE, 0x1F, 0x60), 1.7),  # rose garden
     "green": lighten_rgb(rgb(0x85, 0x94, 0x38), 1.7),  # soybean
     "grey": rgb(162, 163, 175),  # cool grey (not sure which one)
     "brown": rgb(224, 171, 118),  # buff
+    "background": rgb(0, 150, 130),  # maya@rahel operation background
+    "hand": rgb(254, 231, 195),  # maya@rahel glove color
 }
 # "zoom out" factor when rendering arena; values above 1 will show parts of the
 # arena border in allocentric view.

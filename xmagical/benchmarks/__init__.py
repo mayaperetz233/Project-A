@@ -33,7 +33,8 @@ class Embodiment(str, enum.Enum):
     SHORTSTICK = "Shortstick"
     MEDIUMSTICK = "Mediumstick"
     LONGSTICK = "Longstick"
-
+    HAND = "Hand"
+#maya@Rahel
 
 class ObservationSpace(str, enum.Enum):
     """The type of observation used by a task environment."""
@@ -97,8 +98,7 @@ EMBODIMENT_TO_CLASS: Dict[Embodiment, Callable] = {
     Embodiment.MEDIUMSTICK: embodiments.MediumstickEmbodiment,
     Embodiment.LONGSTICK: embodiments.LongstickEmbodiment,
     Embodiment.HAND: embodiments.NonHolonomicHandEmbodiment,
-    #imporat change - maya@rahel
-
+#maya@rahel
 }
 VARIANT_TO_KWARG: Dict[Variant, str] = {
     # Variant.DEMO need not set any kwarg.
